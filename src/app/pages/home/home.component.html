@@ -1,0 +1,115 @@
+<section >
+    <div class="p-4 overflow-hidden sm:ml-64 min-h-screen">
+    <div class="container mx-auto py-8 px-4">
+        <h1 class="font-[Pacifico] text-4xl font-bold bg-gradient-to-r from-[#F29724] to-[#c90519] bg-clip-text text-transparent inline-block">
+            Learn, Cook, Eat Your Food
+          </h1>
+            <ul class="sm:flex hidden mt-8 flex-wrap gap-4  font-medium text-center text-gray-500 border-b border-gray-200   dark:border-gray-600 dark:text-gray-400">
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block dark:hover:shadow-gray-800   px-4 py-2  border transition-all hover:shadow-xl shadow duration-300 rounded-full    cursor-pointer"   [class]="{ 'bg-black': selectedCategory === '','text-white': selectedCategory === '','hover:bg-black': selectedCategory === '','hover:text-white': selectedCategory === ''}" (click)="getMeal('')">All</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800   border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer"  (click)="getMeal('beef')"  [class]="{ 'bg-black': selectedCategory === 'beef','text-white': selectedCategory === 'beef','hover:bg-black': selectedCategory === 'beef','hover:text-white': selectedCategory === 'beef'}">Beef</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2  dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer" [class]="{ 'bg-black': selectedCategory === 'Breakfast','text-white': selectedCategory === 'Breakfast','hover:bg-black': selectedCategory === 'Breakfast','hover:text-white': selectedCategory === 'Breakfast'}"  (click)="getMeal('Breakfast')">Breakfast</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2  dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer" [class]="{ 'bg-black': selectedCategory === 'Chicken','text-white': selectedCategory === 'Chicken','hover:bg-black': selectedCategory === 'Chicken','hover:text-white': selectedCategory === 'Chicken'}" (click)="getMeal('Chicken')">Chicken</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer" [class]="{ 'bg-black': selectedCategory === 'Dessert','text-white': selectedCategory === 'Dessert','hover:bg-black': selectedCategory === 'Dessert','hover:text-white': selectedCategory === 'Dessert'}"(click)="getMeal('Dessert')">Dessert</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer"[class]="{ 'bg-black': selectedCategory === 'Goat','text-white': selectedCategory === 'Goat','hover:bg-black': selectedCategory === 'Goat','hover:text-white': selectedCategory === 'Goat'}" (click)="getMeal('Goat')">Goat</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer" [class]="{ 'bg-black': selectedCategory === 'Lamb','text-white': selectedCategory === 'Lamb','hover:bg-black': selectedCategory === 'Lamb','hover:text-white': selectedCategory === 'Lamb'}"(click)="getMeal('Lamb')">Lamb</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer"[class]="{ 'bg-black': selectedCategory === 'Miscellaneous','text-white': selectedCategory === 'Miscellaneous','hover:bg-black': selectedCategory === 'Miscellaneous','hover:text-white': selectedCategory === 'Miscellaneous'}"(click)="getMeal('Miscellaneous')" >Miscellaneous</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer"[class]="{ 'bg-black': selectedCategory === 'Pasta','text-white': selectedCategory === 'Pasta','hover:bg-black': selectedCategory === 'Pasta','hover:text-white': selectedCategory === 'Pasta'}"(click)="getMeal('Pasta')" >Pasta</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer"[class]="{ 'bg-black': selectedCategory === 'Pork','text-white': selectedCategory === 'Pork','hover:bg-black': selectedCategory === 'Pork','hover:text-white': selectedCategory === 'Pork'}"(click)="getMeal('Pork')" >Pork</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer"[class]="{ 'bg-black': selectedCategory === 'Seafood','text-white': selectedCategory === 'Seafood','hover:bg-black': selectedCategory === 'Seafood','hover:text-white': selectedCategory === 'Seafood'}"(click)="getMeal('Seafood')" >Seafood</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer"[class]="{ 'bg-black': selectedCategory === 'Side','text-white': selectedCategory === 'Side','hover:bg-black': selectedCategory === 'Side','hover:text-white': selectedCategory === 'Side'}"(click)="getMeal('Side')" >Side</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer"[class]="{ 'bg-black': selectedCategory === 'Starter','text-white': selectedCategory === 'Starter','hover:bg-black': selectedCategory === 'Starter','hover:text-white': selectedCategory === 'Starter'}"(click)="getMeal('Starter')" >Starter</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer"[class]="{ 'bg-black': selectedCategory === 'Vegan','text-white': selectedCategory === 'Vegan','hover:bg-black': selectedCategory === 'Vegan','hover:text-white': selectedCategory === 'Vegan'}"(click)="getMeal('Vegan')" >Vegan</a>
+                </li>
+                <li class="me-2"> 
+              <a aria-current="page" class="inline-block px-4 py-2 dark:hover:shadow-gray-800  border transition-all hover:shadow-xl shadow duration-300 rounded-full  cursor-pointer"[class]="{ 'bg-black': selectedCategory === 'Vegetarian','text-white': selectedCategory === 'Vegetarian','hover:bg-black': selectedCategory === 'Vegetarian','hover:text-white': selectedCategory === 'Vegetarian'}"(click)="getMeal('Vegetarian')" >Vegetarian</a>
+                </li>
+            </ul>
+            <form class="sm:hidden mt-8">
+                <label for="meal-select" class="sr-only ">Select Meal Type</label>
+                <select (change)="onMealChange($event)"
+                  id="meal-select"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                 >
+                  <option value="" disabled selected>Select a Meal</option>
+                  <option value="Beef">Beef</option>
+                  <option value="Breakfast">Breakfast</option>
+                  <option value="Chicken">Chicken</option>
+                  <option value="Dessert">Dessert</option>
+                  <option value="Goat">Goat</option>
+                  <option value="Lamb">Lamb</option>
+                  <option value="Miscellaneous">Miscellaneous</option>
+                  <option value="Pasta">Pasta</option>
+                  <option value="Pork">Pork</option>
+                  <option value="Seafood">Seafood</option>
+                  <option value="Side">Side</option>
+                  <option value="Starter">Starter</option>
+                  <option value="Vegan">Vegan</option>
+                  <option value="Vegetarian">Vegetarian</option>
+                </select>
+              </form>
+              <div class="meals grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-20 mt-24">
+                @for (meal of Meals; track meal.idMeal) {
+                  @if (isLoading) {
+                    <div role="status" class="max-w-sm p-4 border border-gray-200 rounded-sm shadow-sm animate-pulse md:p-6 dark:border-gray-700 dark:bg-gray-800">
+                      <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded-sm dark:bg-gray-700">
+                        <svg class="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                          <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM10.5 6a1.5 1.5 0 1 1 0 2.999A1.5 1.5 0 0 1 10.5 6Zm2.221 10.515a1 1 0 0 1-.858.485h-8a1 1 0 0 1-.9-1.43L5.6 10.039a.978.978 0 0 1 .936-.57 1 1 0 0 1 .9.632l1.181 2.981.541-1a.945.945 0 0 1 .883-.522 1 1 0 0 1 .879.529l1.832 3.438a1 1 0 0 1-.031.988Z"/>
+                          <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
+                        </svg>
+                      </div>
+                      <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+                      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+                      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+                      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                      <div class="flex items-center mt-4"></div>
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  }
+                  @else {
+                    <div class="meal text-center hover:shadow-xl group hover:scale-105 duration-300 transition-all bg-white dark:bg-gray-800 dark:text-white p-12 pb-4 rounded-[35px]">
+                      <img [src]="meal.strMealThumb" class="w-full group-hover:rotate-[360deg] duration-700 transition-all rounded-full drop-shadow-xl -translate-y-20 shadow-2xl" [alt]="meal.strMeal">
+                      <h2 class="font-semibold text-xl -mt-12 tracking-wider dark:text-white">{{meal.strMeal.split(" ",2).join(' ')}}</h2>
+                      @if (meal.strArea) {
+                        <h3 class="flex justify-center items-center gap-2 text-emerald-600 dark:text-emerald-400">
+                          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path>
+                          </svg>{{meal.strArea}}
+                        </h3>
+                      }
+                      <button class="text-white bg-gradient-to-r mt-4 bg-[#21ba75] hover:bg-emerald-600 dark:bg-emerald-700 dark:hover:bg-emerald-800 font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 px-8 py-2 rounded-full" [routerLink]="['/mealDetails',meal.idMeal]">
+                        View Recipe
+                      </button>
+                    </div>
+                  }
+                }
+              </div>
+              </div>   
+ </div>
+</section>
